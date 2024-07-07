@@ -134,8 +134,8 @@ The peak_calling function will separate all the samples containing the <code cla
 <p><strong>Optional arguments:</strong></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--percentage</span></code>: Cut-off percentage for peak calling software, default= 0.01.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-qval,</span> <span class="pre">--macs2_qvalue</span></code>: Macs2 callpeak Q-value, default is None , if qvalue is used then Percentage or P-value will not be considered, default= None.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-eB,</span> <span class="pre">--export_bdg</span></code>: MACS2 - Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting”, default= False.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-qval,</span> <span class="pre">--macs2_qvalue</span></code>: Macs2 callpeak Q-value, default is None, if qvalue is used then Percentage or P-value will not be considered, default= None.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-eB,</span> <span class="pre">--export_bdg</span></code>: Macs2 Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting”, default= False.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-tbl,</span> <span class="pre">--fragment_table</span></code>: Input CSV file with the following columns = [“Sample”, “Replication”, “SequencingDepth”, “MappedFragments”, “AlignmentRate”] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: <code class="docutils literal notranslate"><span class="pre">bowtie2_alignment</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">out_dir</span></code>: Output directory, default = current working directory.</p></li>
 </ul>

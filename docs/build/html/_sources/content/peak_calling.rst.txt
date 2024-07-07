@@ -46,8 +46,8 @@ Arguments
 **Optional arguments:**
 
 - ``-p, --percentage``: Cut-off percentage for peak calling software, default= 0.01.
-- ``-qval, --macs2_qvalue``: Macs2 callpeak Q-value, default is None , if qvalue is used then Percentage or P-value will not be considered, default= None.
-- ``-eB, --export_bdg``: MACS2 - Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting", default= False.
+- ``-qval, --macs2_qvalue``: Macs2 callpeak Q-value, default is None, if qvalue is used then Percentage or P-value will not be considered, default= None.
+- ``-eB, --export_bdg``: Macs2 Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting", default= False.
 - ``-tbl, --fragment_table``: Input CSV file with the following columns = ["Sample", "Replication", "SequencingDepth", "MappedFragments", "AlignmentRate"] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: ``bowtie2_alignment``.
 - ``-o, out_dir``: Output directory, default = current working directory.
 
