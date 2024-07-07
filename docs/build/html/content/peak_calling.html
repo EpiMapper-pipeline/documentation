@@ -104,9 +104,9 @@
 The peak_calling function will separate all the samples containing the <code class="docutils literal notranslate"><span class="pre">-c,</span> <span class="pre">--control_index</span></code>, and use these at input for background-noise.</p>
 <section id="arguments">
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Arguments</a><a class="headerlink" href="#arguments" title="Link to this heading"></a></h2>
-<p><strong>Required arguments:</strong>
-- <code class="docutils literal notranslate"><span class="pre">-soft,</span> <span class="pre">--software</span></code>: input has to be either “macs2” or “seacr”. Here you decide which peak calling software you would like to use. Generally, MACS2 is more used and prefered for samples with higher background noise ( ie. ATAC-seq and CHiP-seq), while SEACR may be used for samples with lower noise.</p>
+<p><strong>Required arguments:</strong></p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-soft,</span> <span class="pre">--software</span></code>: input has to be either “macs2” or “seacr”. Here you decide which peak calling software you would like to use. Generally, MACS2 is more used and prefered for samples with higher background noise ( ie. ATAC-seq and CHiP-seq), while SEACR may be used for samples with lower noise.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-f,</span> <span class="pre">--fragments</span></code>: Input file folder of filterd BED files for peak calling.</p></li>
 </ul>
 <p><em>If peak calling with SEACR software:</em></p>
@@ -133,8 +133,10 @@ The peak_calling function will separate all the samples containing the <code cla
 </ul>
 <p><strong>Optional arguments:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--percentage</span></code>: Cut-off percentage for peak calling software, Default= 0.01 for SEACR, and for MACS2 it is 0.05 q-value.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-tbl,</span> <span class="pre">--fragment_table</span></code>: Input CSV file with the following columns = [“Sample”,    “Replication”, “SequencingDepth”, “MappedFragments”, “AlignmentRate”] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: <code class="docutils literal notranslate"><span class="pre">bowtie2_alignment</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-p,</span> <span class="pre">--percentage</span></code>: Cut-off percentage for peak calling software, default= 0.01.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-qval,</span> <span class="pre">--macs2_qvalue</span></code>: Macs2 callpeak Q-value, default is None , if qvalue is used then Percentage or P-value will not be considered, default= None.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-eB,</span> <span class="pre">--export_bdg</span></code>: MACS2 - Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting”, default= False.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-tbl,</span> <span class="pre">--fragment_table</span></code>: Input CSV file with the following columns = [“Sample”, “Replication”, “SequencingDepth”, “MappedFragments”, “AlignmentRate”] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: <code class="docutils literal notranslate"><span class="pre">bowtie2_alignment</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-o,</span> <span class="pre">out_dir</span></code>: Output directory, default = current working directory.</p></li>
 </ul>
 <div class="admonition note">

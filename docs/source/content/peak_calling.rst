@@ -15,6 +15,7 @@ Arguments
 
 
 **Required arguments:**
+
 - ``-soft, --software``: input has to be either "macs2" or "seacr". Here you decide which peak calling software you would like to use. Generally, MACS2 is more used and prefered for samples with higher background noise ( ie. ATAC-seq and CHiP-seq), while SEACR may be used for samples with lower noise.
 
 - ``-f, --fragments``: Input file folder of filterd BED files for peak calling.
@@ -44,8 +45,10 @@ Arguments
 
 **Optional arguments:**
 
-- ``-p, --percentage``: Cut-off percentage for peak calling software, Default= 0.01 for SEACR, and for MACS2 it is 0.05 q-value.
-- ``-tbl, --fragment_table``: Input CSV file with the following columns = ["Sample",	"Replication", "SequencingDepth", "MappedFragments", "AlignmentRate"] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: ``bowtie2_alignment``.
+- ``-p, --percentage``: Cut-off percentage for peak calling software, default= 0.01.
+- ``-qval, --macs2_qvalue``: Macs2 callpeak Q-value, default is None , if qvalue is used then Percentage or P-value will not be considered, default= None.
+- ``-eB, --export_bdg``: MACS2 - Whether or not to save extended fragment pileup, defualt=False for not export, use True or exporting", default= False.
+- ``-tbl, --fragment_table``: Input CSV file with the following columns = ["Sample", "Replication", "SequencingDepth", "MappedFragments", "AlignmentRate"] with corresponding sample information, default = “bowtie2_alignment_ref.csv” exported by this pipeline function: ``bowtie2_alignment``.
 - ``-o, out_dir``: Output directory, default = current working directory.
 
 .. note::
