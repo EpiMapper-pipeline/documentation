@@ -125,6 +125,7 @@ chr1<span class="w">        </span><span class="m">174502</span><span class="w">
 </ul>
 <p><strong>Optional arguments:</strong></p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-tm,</span> <span class="pre">--test_methods</span></code>: Four hypothesis testing methods are available for selection: t-test, Kolmogorov-Smirnov test (K-S test), Mann-Whitney U test, and Wilcoxon rank-sum test. The corresponding values are “ttest”, “kstest”, “mannwhitneyu”, and “ranksumtest”. Default=ttest.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-an,</span> <span class="pre">--annotate</span></code>: Wheither or not to annotate the data. The annotation step might take a considerable amount of time, especially with large samples (i.e geneom wide ATAC-seq). Default=False</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-fold,</span> <span class="pre">--fold_enrichment</span></code>: Input must be either “True” or “False”. The function will use fold enrichemnt as well as normalization before differential analysis. Default=False</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-cut,</span> <span class="pre">--p_value_cutoff</span></code>:  Cut-off p-value for differential analysis, default =0.05</p></li>

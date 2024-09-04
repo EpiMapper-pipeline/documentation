@@ -37,6 +37,7 @@ Arguments
 
 **Optional arguments:**
 
+- ``-tm, --test_methods``: Four hypothesis testing methods are available for selection: t-test, Kolmogorov-Smirnov test (K-S test), Mann-Whitney U test, and Wilcoxon rank-sum test. The corresponding values are "ttest", "kstest", "mannwhitneyu", and "ranksumtest". Default=ttest.
 - ``-an, --annotate``: Wheither or not to annotate the data. The annotation step might take a considerable amount of time, especially with large samples (i.e geneom wide ATAC-seq). Default=False 
 - ``-fold, --fold_enrichment``: Input must be either "True" or "False". The function will use fold enrichemnt as well as normalization before differential analysis. Default=False
 - ``-cut, --p_value_cutoff``:  Cut-off p-value for differential analysis, default =0.05
